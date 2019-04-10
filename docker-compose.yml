@@ -36,6 +36,7 @@ services:
   etcd:
     image: 'quay.io/coreos/etcd'
     command: [
+      '/usr/local/bin/etcd',
       '-name', 'etcd0',
       '-advertise-client-urls','http://etcd.local:2379,http://etcd.local:4001',
       '-listen-client-urls', 'http://0.0.0.0:2379,http://0.0.0.0:4001',
