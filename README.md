@@ -1,5 +1,8 @@
-# celery-flower-docker
-Docker container for monitoring celery
+# latest-celery-flower-docker
+
+> :exclamation: This repository is a fork of an unmaintained [https://github.com/totem/celery-flower-docker](celery-flower-docker) repository, updated with the newest version of the Celery Flower monitoring application.
+
+Docker container containing the Celery Flower monitoring application.
 
 ## Running with docker
 
@@ -20,16 +23,16 @@ If your are using dynamic port mapping using (-P), inspect the container to dete
 port for 5555.
 
 ## Run Configuration (Environment Variables)
-| Env Variable | Description | Default Value (Docker)|
-| ------------ | ----------- |--------------------- |
-| FLOWER_PORT | Port to be used by flower | 5555 |
-| AMQP_USERNAME | Rabbitmq broker username | guest |
-| AMQP_PASSWORD | Rabbitmq broker password | guest |
-| AMQP_HOST | Rabbitmq host | 172.17.42.1 |
-| AMQP_PORT | Rabbitmq port | 5672 |
-| AMQP_ADMIN_USERNAME | Rabbitmq admin username | guest |
-| AMQP_ADMIN_PASSWORD | Rabbitmq admin password | guest |
-| AMQP_ADMIN_HOST | Rabbitmq admin host | 172.17.42.1 |
-| AMQP_ADMIN_PORT | Rabbitmq admin port | 15672 |
-| FLOWER_MAX_TASKS | Max tasks to be stored in memory. | 3600 |
-| FLOWER_BASIC_AUTH | Authentication for flower (username:passowrd) | root:changeit |
+| Env Variable        | Description                                   | Default Value (Docker) |
+| ------------------- | --------------------------------------------- | ---------------------- |
+| FLOWER_PORT         | Port to be used by flower                     | 5555                   |
+| AMQP_USERNAME       | Rabbitmq broker username                      | guest                  |
+| AMQP_PASSWORD       | Rabbitmq broker password                      | guest                  |
+| AMQP_HOST           | Rabbitmq host                                 | 172.17.42.1            |
+| AMQP_PORT           | Rabbitmq port                                 | 5672                   |
+| AMQP_ADMIN_USERNAME | Rabbitmq admin username                       | guest                  |
+| AMQP_ADMIN_PASSWORD | Rabbitmq admin password                       | guest                  |
+| AMQP_ADMIN_HOST     | Rabbitmq admin host                           | 172.17.42.1            |
+| AMQP_ADMIN_PORT     | Rabbitmq admin port                           | 15672                  |
+| FLOWER_MAX_TASKS    | Max tasks to be stored in memory.             | 3600                   |
+| FLOWER_BASIC_AUTH   | Authentication for flower (username:passowrd) | root:changeit          |
