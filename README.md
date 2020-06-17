@@ -7,10 +7,10 @@ Docker container containing the Celery Flower monitoring application.
 ## Running with docker
 
 In order to run flower using  docker , run
-command: 
+command:
 
 ```
-sudo docker run -it --rm --name flower -p 5555:5555 totem/celery-flower-docker
+sudo docker run -it --rm --name flower -p 5555:5555 gregsi/latest-celery-flower-docker
 ```
 
 ## Access Flower
