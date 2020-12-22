@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV ETCDCTL_VERSION v2.2.5
 ENV DUMB_INIT_VERSION 1.0.1
 
-ARG FLOWER_VERSION=0.9.5
+ARG FLOWER_VERSION=0.9.7
 
 RUN apk add --no-cache --update openssl curl && \
   # Etcdctl
