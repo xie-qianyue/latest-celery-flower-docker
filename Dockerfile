@@ -7,7 +7,8 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV ETCDCTL_VERSION v2.2.5
 ENV DUMB_INIT_VERSION 1.0.1
 
-ARG FLOWER_VERSION=0.9.3
+ARG FLOWER_VERSION=0.9.7
+ARG CELERY_VERSION=4.4.7
 
 RUN apk add --no-cache --update openssl curl && \
   # Etcdctl
@@ -18,7 +19,7 @@ RUN apk add --no-cache --update openssl curl && \
   chmod +x /usr/bin/dumb-init && \
   rm -rf /tmp/*
 
-RUN pip3 install --ignore-installed --no-cache-dir flower==${FLOWER_VERSION} && \
+RUN pip3 install --ignore-installed --no-cache-dir flower==${FLOWER_VERSION} celery==${CELERY_VERSION} && \
   find /usr/local \
   \( -type d -a -name test -o -name tests \) -exec echo rm -rf '{}' + \
   -o \( -type f -a -name '*.pyc' -o -name '*.pyo' \) -exec echo rm -f '{}' + && \
